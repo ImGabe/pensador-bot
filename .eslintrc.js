@@ -1,19 +1,20 @@
 module.exports = {
-  env: {
-    commonjs: true,
-    es6: true,
-    node: true,
+  'env': {
+    'browser': true,
+    'es2021': true,
+    'node': true,
   },
-  extends: [
-    'airbnb-base',
+  'extends': [
+    'google',
   ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
+  'parser': '@typescript-eslint/parser',
+  'parserOptions': {
+    'ecmaVersion': 12,
+    'sourceType': 'module',
   },
-  parserOptions: {
-    ecmaVersion: 2018,
-  },
-  rules: {
+  'plugins': [
+    '@typescript-eslint',
+  ],
+  'rules': {
   },
 };
